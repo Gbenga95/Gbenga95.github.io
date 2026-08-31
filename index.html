@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gbenga Emmanuel Aderibigbe | Data Analyst & Financial Systems Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0a0f1d;
+            --card-bg: #111827;
+            --card-border: #1f2937;
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --tag-bg: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header / Hero */
+        header {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid var(--card-border);
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .hero-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .hero-nav a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--text-main);
+        }
+
+        .section-title i {
+            color: var(--accent-blue);
+        }
+
+        /* General Section Layout */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        /* Background Section */
+        .background-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .background-card p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .background-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        /* Skill Stack Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.8rem;
+        }
+
+        .skill-card h3 {
+            color: var(--accent-cyan);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-card li i {
+            color: var(--accent-blue);
+            font-size: 0.8rem;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-blue);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.35rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .project-link {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: var(--tag-bg);
+            color: #60a5fa;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(96, 165, 250, 0.2);
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .contact-card p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background-color: var(--tag-bg);
+            color: var(--text-main);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid var(--card-border);
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .contact-btn:hover {
+            border-color: var(--accent-blue);
+            background-color: #1e293b;
+            color: var(--accent-cyan);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--card-border);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- HEADER / HERO -->
+        <header>
+            <h1>Gbenga Emmanuel Aderibigbe</h1>
+            <p class="subtitle">Data Analyst • Tech Instructor • Financial Engineering Scholar</p>
+            <nav class="hero-nav">
+                <a href="#about"><i class="fas fa-user"></i> About</a>
+                <a href="#skills"><i class="fas fa-layer-group"></i> Skills</a>
+                <a href="#projects"><i class="fas fa-database"></i> Projects</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ABOUT & BACKGROUND SECTION -->
+            <section id="about">
+                <h2 class="section-title"><i class="fas fa-user"></i> Background & Expertise</h2>
+                <div class="background-card">
+                    <p>
+                        I am a <span class="highlight">Data Analyst and Tech Instructor</span> specializing in relational database analytics, financial engineering concepts, and structured quantitative modeling. With a strong background in analytical problem-solving and technical instruction, I design robust analytical scripts, automated data workflows, and complex database querying models.
+                    </p>
+                    <p>
+                        Currently pursuing an <span class="highlight">M.Sc. in Financial Engineering</span> with WorldQuant University, my focus centers on the intersection of algorithmic SQL query optimization, risk modeling, deep learning techniques, and automated financial auditing.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SKILL STACK SECTION -->
+            <section id="skills">
+                <h2 class="section-title"><i class="fas fa-layer-group"></i> Technical Skill Stack</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-card">
+                        <h3><i class="fas fa-database"></i> SQL & Database Analytics</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Advanced CTEs & Subqueries</li>
+                            <li><i class="fas fa-check"></i> Analytical Window Functions (LEAD, LAG, NTILE)</li>
+                            <li><i class="fas fa-check"></i> PostgreSQL, MySQL & SQLite Engine Setup</li>
+                            <li><i class="fas fa-check"></i> Data Reconciliation & Exception Handling</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3><i class="fas fa-code"></i> Python & Data Science</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Data Processing (Pandas, NumPy, SciPy)</li>
+                            <li><i class="fas fa-check"></i> Deep Learning Frameworks (PyTorch)</li>
+                            <li><i class="fas fa-check"></i> Recommendation Systems & Matrix Operations</li>
+                            <li><i class="fas fa-check"></i> Machine Learning (Scikit-learn)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3><i class="fas fa-chart-line"></i> Financial Systems & Business Intelligence</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Financial Engineering & Quantitative Analysis</li>
+                            <li><i class="fas fa-check"></i> Advanced Spreadsheet Modeling & Functions</li>
+                            <li><i class="fas fa-check"></i> Accounts Payable & Vendor Aging Models</li>
+                            <li><i class="fas fa-check"></i> Technical Instruction & Curriculum Design</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- FEATURED PROJECTS SECTION -->
+            <section id="projects">
+                <h2 class="section-title"><i class="fas fa-database"></i> Featured SQL Projects</h2>
+                <div class="projects-grid">
+                    
+                    <!-- PROJECT 1 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Dynamic Pricing & Inventory Velocity Engine</h3>
+                            <a href="https://github.com/Gbenga95/ecommerce-dynamic-pricing-velocity-sql" target="_blank" class="project-link">
+                                View Repo <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <p class="project-desc">
+                            Automated SQL pricing pipeline calculating 7-day rolling inventory velocity, projecting stockout runways, and dynamically executing surge (+15%) or discount (-15%) pricing rules.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">SQL CTEs</span>
+                            <span class="tag">Moving Averages</span>
+                            <span class="tag">NULLIF Zero-Protection</span>
+                            <span class="tag">Algorithmic Pricing</span>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Order Sequence Gap & Vendor Payout Auditor</h3>
+                            <a href="https://github.com/Gbenga95/ecommerce-order-gap-aging-sql" target="_blank" class="project-link">
+                                View Repo <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <p class="project-desc">
+                            Financial auditing engine using window functions to detect broken sequential order IDs and categorize outstanding vendor balances into 30/60/90+ day aging schedules.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">LEAD() Window Function</span>
+                            <span class="tag">Audit Trail Reconciliation</span>
+                            <span class="tag">Accounts Payable Aging</span>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 3 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Settlement & Exception Reconciliation Engine</h3>
+                            <a href="https://github.com/Gbenga95/ecommerce-settlement-reconciliation-sql" target="_blank" class="project-link">
+                                View Repo <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <p class="project-desc">
+                            Automated auditing script reconciling transaction payloads between external payment gateways and internal Order Management System (OMS) ledgers.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">FULL OUTER JOIN</span>
+                            <span class="tag">COALESCE Auditing</span>
+                            <span class="tag">Financial Reconciliation</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- CONTACT & CONNECT SECTION -->
+            <section id="contact">
+                <h2 class="section-title"><i class="fas fa-envelope"></i> Get In Touch</h2>
+                <div class="contact-card">
+                    <p>Open to data analytics collaborations, quantitative modeling projects, and technical instruction opportunities.</p>
+                    <div class="contact-grid">
+                        <a href="https://github.com/Gbenga95" target="_blank" class="contact-btn">
+                            <i class="fab fa-github"></i> GitHub Profile
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="contact-btn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="mailto:your-email@example.com" class="contact-btn">
+                            <i class="fas fa-paper-plane"></i> Send Email
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2026 Gbenga Emmanuel Aderibigbe. Hosted on GitHub Pages.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
