@@ -226,16 +226,6 @@
             font-weight: 600;
         }
 
-        .project-link {
-            color: var(--accent-cyan);
-            text-decoration: none;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            font-weight: 500;
-        }
-
         .project-desc {
             color: var(--text-muted);
             margin-bottom: 1rem;
@@ -292,4 +282,201 @@
             gap: 0.6rem;
             background-color: var(--tag-bg);
             color: var(--text-main);
-            padding: 0
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid var(--card-border);
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            border-color: var(--accent-blue);
+            background-color: #1e293b;
+            color: var(--accent-cyan);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--card-border);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- HEADER / HERO -->
+        <header>
+            <h1>Gbenga Emmanuel Aderibigbe</h1>
+            <p class="subtitle">Data Analyst & Financial SQL Expert</p>
+            <nav class="hero-nav">
+                <a href="#about"><i class="fas fa-user"></i> About</a>
+                <a href="#skills"><i class="fas fa-layer-group"></i> Skills</a>
+                <a href="#projects"><i class="fas fa-database"></i> Systems Portfolio</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="#" class="cv-btn"><i class="fas fa-file-download"></i> Download CV</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ABOUT & BACKGROUND SECTION -->
+            <section id="about" class="reveal">
+                <h2 class="section-title"><i class="fas fa-user"></i> Background & Systems Expertise</h2>
+                <div class="background-card">
+                    <p>
+                        I am a <span class="highlight">Data Analyst and Financial SQL Expert</span> specializing in relational database querying, automated transaction auditing, ledger exception reconciliation, and financial data modeling. My expertise lies in architecting complex SQL scripts to monitor ledger integrity, resolve system discrepancies, and optimize financial reporting workflows.
+                    </p>
+                    <p>
+                        Currently pursuing an <span class="highlight">M.Sc. in Financial Engineering</span> with WorldQuant University, my focus centers on enterprise database optimization, accounts payable aging models, automated variance isolation, and high-volume transaction analytics.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SKILL STACK SECTION -->
+            <section id="skills" class="reveal">
+                <h2 class="section-title"><i class="fas fa-layer-group"></i> Core Systems Skill Stack</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-card">
+                        <h3><i class="fas fa-database"></i> Advanced SQL & Database Analytics</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Complex Joins (FULL OUTER, LEFT, Self-Joins)</li>
+                            <li><i class="fas fa-check"></i> Window Functions (LEAD, LAG, NTILE, DENSE_RANK)</li>
+                            <li><i class="fas fa-check"></i> Common Table Expressions (CTEs) & Subqueries</li>
+                            <li><i class="fas fa-check"></i> PostgreSQL, SQL Server & MySQL Environments</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3><i class="fas fa-file-invoice-dollar"></i> Financial Systems & Auditing</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Gateway-to-Ledger Exception Reconciliation</li>
+                            <li><i class="fas fa-check"></i> Transaction Sequence & Data Loss Auditing</li>
+                            <li><i class="fas fa-check"></i> Accounts Payable & Vendor Aging Modeling</li>
+                            <li><i class="fas fa-check"></i> Zero-Division & NULL Handling (`COALESCE`, `NULLIF`)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3><i class="fas fa-chart-pie"></i> Data Analytics & Spreadsheets</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Advanced Excel (INDEX/MATCH, XLOOKUP, Nested IFs)</li>
+                            <li><i class="fas fa-check"></i> Python Integration (Pandas, NumPy Data Preprocessing)</li>
+                            <li><i class="fas fa-check"></i> Automated Reporting & Metric Modeling</li>
+                            <li><i class="fas fa-check"></i> Technical Instruction & Workflow Documentation</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- FEATURED FINANCIAL SYSTEMS PROJECTS SECTION -->
+            <section id="projects" class="reveal">
+                <h2 class="section-title"><i class="fas fa-database"></i> Featured Financial Systems Work</h2>
+                <div class="projects-grid">
+                    
+                    <!-- PROJECT 1: Reconciliation -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Payment Gateway & Ledger Exception Reconciliation Engine</h3>
+                        </div>
+                        <p class="project-desc">
+                            Automated financial auditing script that performs FULL OUTER JOINs between external payment gateway payloads and internal billing ledgers. Automatically isolates unreconciled transactions, fee variance bugs, and unfulfilled customer payments.
+                        </p>
+                        <p class="impact-statement"><i class="fas fa-check-circle"></i> <strong>Key Systems Value:</strong> Automates financial exception handling and eliminates manual row-by-row reconciliation errors.</p>
+                        <div class="tech-tags">
+                            <span class="tag">FULL OUTER JOIN</span>
+                            <span class="tag">COALESCE Auditing</span>
+                            <span class="tag">Financial Reconciliation</span>
+                            <span class="tag">System Variance Tracking</span>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2: Sequence Gap & Aging -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Order Sequence Gap & Vendor Payout Aging Auditor</h3>
+                        </div>
+                        <p class="project-desc">
+                            Dual-purpose auditing engine using analytical window functions (`LEAD()`) to detect broken sequential transaction IDs (flagging system drops or fraud) while categorizing outstanding vendor balances into 30/60/90+ day aging buckets.
+                        </p>
+                        <p class="impact-statement"><i class="fas fa-check-circle"></i> <strong>Key Systems Value:</strong> Guarantees transaction log completeness and provides real-time visibility into working capital liability.</p>
+                        <div class="tech-tags">
+                            <span class="tag">LEAD() Window Function</span>
+                            <span class="tag">Audit Trail Integrity</span>
+                            <span class="tag">Accounts Payable Aging</span>
+                            <span class="tag">Conditional Aggregations</span>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 3: Dynamic Pricing & Velocity -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Dynamic Pricing & Inventory Velocity Engine</h3>
+                        </div>
+                        <p class="project-desc">
+                            SQL optimization model calculating 7-day rolling inventory velocity, stockout runway projections, and dynamic price adjustments using mathematical safeguards (`NULLIF`) against division-by-zero errors.
+                        </p>
+                        <p class="impact-statement"><i class="fas fa-check-circle"></i> <strong>Key Systems Value:</strong> Automates business logic triggers to maintain optimal stock levels and protect margins.</p>
+                        <div class="tech-tags">
+                            <span class="tag">SQL CTEs</span>
+                            <span class="tag">Moving Averages</span>
+                            <span class="tag">NULLIF Protection</span>
+                            <span class="tag">Automated Decision Logic</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- CONTACT & CONNECT SECTION -->
+            <section id="contact" class="reveal">
+                <h2 class="section-title"><i class="fas fa-envelope"></i> Get In Touch</h2>
+                <div class="contact-card">
+                    <p>Open to financial systems optimization roles, data analytics collaborations, and database audit opportunities.</p>
+                    <div class="contact-grid">
+                        <a href="https://www.linkedin.com/in/gbenga-emmanuel-aderibigbe-936a731a3/" target="_blank" class="contact-btn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://x.com/iam_glexz" target="_blank" class="contact-btn">
+                            <i class="fab fa-x-twitter"></i> X (Twitter)
+                        </a>
+                        <a href="mailto:aderibigbe.gbenga95@gmail.com" class="contact-btn">
+                            <i class="fas fa-paper-plane"></i> Send Email
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2026 Gbenga Emmanuel Aderibigbe. Hosted on GitHub Pages.</p>
+        </footer>
+
+    </div>
+
+    <!-- ScrollReveal JavaScript -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+
+</body>
+</html>
